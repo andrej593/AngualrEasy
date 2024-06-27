@@ -14,7 +14,7 @@ export class LoginComponent {
   authSerice = inject(AuthService);
   router = inject(Router);
 
-  onSubmit() {
+  login() {
     this.authSerice.login();
     this.router.navigateByUrl("/home");
   }
