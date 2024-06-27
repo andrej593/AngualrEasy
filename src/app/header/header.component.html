@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <div *ngIf="authService.logedIn() === null">
+        <mat-icon fontIcon="login"></mat-icon>
+        <a routerLink="register">Register</a>
+        <mat-icon fontIcon="login"></mat-icon>
+        <a routerLink="login">Login</a>
+    </div>
+    <div *ngIf="authService.logedIn() === true">
+        <mat-icon fontIcon="home"></mat-icon>
+        <a routerLink="home">Domov</a>
+        <mat-icon fontIcon="logout"></mat-icon>
+        <a (click)="logout()">Logout</a>
+    </div>
+</mat-toolbar>
